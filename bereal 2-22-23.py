@@ -127,4 +127,4 @@ async def on_ready():
    # error()
 
 # u gotta replace this with ur botty bot key or sum
-bot.run('MTA2Mjg4ODI5ODczNDk0ODQzMw.Glxw0Q.DabgEIpcnuUpy_LSnOoHJFPiogm_7EU7qYr7SA')
+bot.run('')
