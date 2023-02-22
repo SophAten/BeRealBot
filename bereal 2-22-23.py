@@ -122,5 +122,5 @@ async def on_ready():
     print('We have logged in as {0.user}'.format(bot))
    # error()
 
-# u gotta replace this with ur botty bot key or sum
-bot.run('MTA2Mjg4ODI5ODczNDk0ODQzMw.Glxw0Q.DabgEIpcnuUpy_LSnOoHJFPiogm_7EU7qYr7SA')
+#  replace this with bot key
+bot.run('')
