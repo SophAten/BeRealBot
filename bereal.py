@@ -14,7 +14,7 @@ bot = commands.Bot(command_prefix=".", intents=intents)
 bot.thread = None
 bot.count = 0
 
-message = "<@&1068375452885987370> :warning: It's time to be fucking for real! You have 10 minutes to DM me 2 images :warning: DM me `.submit` with 2 images. The first image is the front camera, the second is the back."
+message = "<@&1068375452885987370> :warning: It's time to be real! You have 10 minutes to DM me 2 images :warning: DM me `.submit` with 2 images. The first image is the front camera, the second is the back."
 
 async def createThread():
     dt = datetime.datetime.now()
@@ -80,7 +80,7 @@ async def notify(current_thread):
     wait2_time = datetime.timedelta(minutes=10).total_seconds()
     await asyncio.sleep(wait2_time)
     command.update(enabled=False)
-    await msg.edit(content=f"Time's up losers. Number of people that were fucking real today: {bot.count}")
+    await msg.edit(content=f"Time's up losers. Number of people that were real today: {bot.count}")
 
 @bot.command()
 async def bereal(ctx):
