@@ -26,12 +26,13 @@ async def createThread():
         name= (dateformat),
         type= discord.ChannelType.private_thread,
         invitable=False
-    )
+      )
     embed = discord.Embed(title="BeReal of {}".format(dateformat), description= ":warning: It's Time To Be Real! :warning:", color= 2303786)
     embed.set_author(name="BeRealBot", icon_url="https://upload.wikimedia.org/wikipedia/en/4/40/BeReal_logo.png")
     embed.set_thumbnail(url="https://upload.wikimedia.org/wikipedia/en/4/40/BeReal_logo.png")
     await thread.send(embed=embed)
     bot.thread = thread
+    bot.count = 0
 
 @bot.command()
 async def submit(ctx):
@@ -83,9 +84,17 @@ async def notify(current_thread):
     await msg.edit(content=f"Time's up losers. Number of people that were real today: {bot.count}")
 
 @bot.command()
+@commands.has_permissions(administrator=True)
 async def bereal(ctx):
     await notify(None)
     await BeRealNotif()
+
+    
+@bereal.error
+async def bereal_error(ctx, error):
+    if isinstance(error, commands.MissingPermissions):
+        await ctx.send(f"You need {error.missing_perms} permissions to use this command.")
+        
 
 global command
 command = bot.get_command('submit')
