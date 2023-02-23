@@ -17,7 +17,7 @@ bot.count = 0
 message = "<@&1068375452885987370> :warning: It's time to be real! You have 10 minutes to DM me 2 images :warning: DM me `.submit` with 2 images. The first image is the front camera, the second is the back."
 
 async def createThread():
-    dt = datetime.datetime.now()
+    dt = datetime.datetime.now(MST)
     dateformat = dt.strftime('%x')
     if bot.thread:
         await bot.thread.edit(archived=True, locked=True)
