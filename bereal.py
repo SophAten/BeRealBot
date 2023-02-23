@@ -28,7 +28,7 @@ async def createThread():
         invitable=False
     )
     embed = discord.Embed(title="BeReal of {}".format(dateformat), description= ":warning: It's Time To Be Real! :warning:", color= 2303786)
-    embed.set_author(name="BeFuckingForRealBot", icon_url="https://upload.wikimedia.org/wikipedia/en/4/40/BeReal_logo.png")
+    embed.set_author(name="BeRealBot", icon_url="https://upload.wikimedia.org/wikipedia/en/4/40/BeReal_logo.png")
     embed.set_thumbnail(url="https://upload.wikimedia.org/wikipedia/en/4/40/BeReal_logo.png")
     await thread.send(embed=embed)
     bot.thread = thread
