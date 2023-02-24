@@ -93,7 +93,7 @@ async def bereal(ctx):
 @bereal.error
 async def bereal_error(ctx, error):
     if isinstance(error, commands.MissingPermissions):
-        await ctx.send(f"You need {error.missing_perms} permissions to use this command.")
+        await ctx.send(f"You need admin permissions to use this command.")
         
 
 global command
